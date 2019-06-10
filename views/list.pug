@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  ul
+  each val in data
+    form(method='POST' action='/delete')
+      li= 'ID: '+val["movieId"]+" Name: "+val["name"]+" Genre: "+val["genre"]+" year: "+val["year"]
+      input.form-control(type='hidden', name='name',value=val["movieId"])
+      button.btn.btn-primary(type='submit') Delete
