@@ -5,7 +5,7 @@ var mysql = require('mysql');
 let config = require(__dirname+'/config.js')
  
 // create a connection variable with the required details
-var con = mysql.createConnection(config); 
+
 
 
 /* GET home page. */
@@ -14,6 +14,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
+  var con = mysql.createConnection(config); 
   console.log(req.body);
   
   // insert statment
