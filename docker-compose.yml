@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  node-app:
+    build: ./lab_elb
+    volumes:
+      - ./lab_elb:/usr/src/app
+    ports:
+      - 3000:3000
+
